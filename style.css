@@ -19,7 +19,7 @@
 .container{
     width: 100%;
     height: 100vh; /* vh라고 쓴이유 : height는 100%라고 지정하면 100%가 적용이 안됨. 그래서 뷰포트 단위인 vh를 사용*/
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),url(./images/library.jpeg);
+    background: url(./images/background.jpeg);
 }
 
 .container .header{
@@ -33,7 +33,7 @@
 
 .container .header h1 a{
     text-decoration: none;
-    color: white;
+    color: black;
     font-family: abster;
 }
 
@@ -44,7 +44,7 @@
 
 .container .nav ul li a{
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .container .nav ul li a:hover{
@@ -56,7 +56,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: black;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -73,7 +73,7 @@
 .container .main button{
     background: none;
     border: 2px solid darkseagreen;
-    color: white;
+    color: black;
     padding: 15px 20px;
     border-radius: 20px;
     margin-top: 30px;
@@ -83,5 +83,74 @@
 }
 
 .container .main button:hover{
-    background-color: darkslategray;
+    background-color: rgb(86, 137, 137);
+}
+
+#modal.modal-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#modal .modal-window { 
+
+    background: rgba(232, 221, 65, 0.896);
+    box-shadow: 0 8px 32px 0 rgba(232, 209, 65, 0.37);
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    width: 500px;
+    height: 600px;
+    position: relative;
+    top: -50px;
+    padding: 15px;
+}
+
+#modal .title {
+    padding-left: 10px;
+    display: inline;
+    text-shadow: 1px 1px 2px gray;
+    color: black;
+    
+}
+
+#modal .title h1 {
+    display: inline;
+}
+
+#modal .close-area {
+    display: inline;
+    float: right;
+    padding-right: 10px;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px gray;
+    color: black;
+}
+
+#modal .content {
+    margin-top: 20px;
+    padding: 0px 10px;
+    text-shadow: 1px 1px 1px gray;
+    color: black;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+#modal.modal-overlay {
+    display: none;
 }
